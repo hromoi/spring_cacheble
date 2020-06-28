@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="test">
+  <database-model serializer="dbm" dbms="H2" family-id="H2" format-version="4.16">
+    <root id="1">
+      <ServerVersion>1.4.200</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="TEST">
+      <Current>1</Current>
+    </database>
+    <schema id="3" parent="2" name="INFORMATION_SCHEMA"/>
+    <schema id="4" parent="2" name="NEW_SCHEMA"/>
+    <schema id="5" parent="2" name="PUBLIC">
+      <Current>1</Current>
+    </schema>
+    <table id="6" parent="4" name="USER"/>
+    <column id="7" parent="6" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER(10)|4s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DefaultExpression>NEXT VALUE FOR &quot;NEW_SCHEMA&quot;.&quot;SYSTEM_SEQUENCE_F5D04DAC_57AA_467F_B563_D70408408192&quot;</DefaultExpression>
+    </column>
+    <column id="8" parent="6" name="NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="9" parent="6" name="EMAIL">
+      <Position>3</Position>
+      <DataType>VARCHAR|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="10" parent="6" name="PRIMARY_KEY_2">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="11" parent="6" name="USER_PK">
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
